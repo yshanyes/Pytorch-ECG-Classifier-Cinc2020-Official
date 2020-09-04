@@ -1,4 +1,5 @@
-# Example classifier code for Python for the PhysioNet/CinC Challenge 2020
+# ECG classifier code for Python for the PhysioNet/CinC Challenge 2020
+This is a PyTorch implementation of "Multi-label Classification of Electrocardiogram with Modified Residual Networks" paper.
 
 ## Contents
 
@@ -28,7 +29,7 @@ The `driver.py`, `get_12ECG_score.py`, and `get_12ECG_features.py` scripts must 
 
 ## Details
 
-See the [PhysioNet/CinC 2020 webpage](https://physionetchallenges.github.io/2020/) for more details, including instructions for the other files in this repository.
+See the [PhysioNet/CinC 2020 webpage](https://physionetchallenges.github.io/2020/) for more details, including dataset and instructions for the other files in this repository.
 
 ## Transfer learning using pre-trained
 
@@ -40,4 +41,13 @@ aVL=I-II/2
 aVF=II-I/2
 
 Each sample was sampled at a frequency of 500 HZ, a length of 10 seconds, and a unit voltage of 4.88 microvolts.
+
+code for pre-traind is comming soon.
+
+## Docker command
+1、docker build -t image:v1.0 .
+2、nvidia-docker run -it -v /home/yangshan/cinc2020_pytorch/data:/physionet/data -v /home/yangshan/cinc2020_pytorch/output:/physionet/output  -v /home/yangshan/cinc2020_pytorch/test_data:/physionet/test_data -v /home/yangshan/cinc2020_pytorch/model:/physionet/model  image:v1.0 bash
+3、python train_model.py data/ model/
+4、python driver.py model/ data/ output/
+5、python evaluate_12ECG_score.py data/ output/
 
