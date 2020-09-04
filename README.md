@@ -46,8 +46,12 @@ code for pre-traind is comming soon.
 
 ## Docker command
 1、docker build -t image:v1.0 .
+
 2、nvidia-docker run -it -v /home/yangshan/cinc2020_pytorch/data:/physionet/data -v /home/yangshan/cinc2020_pytorch/output:/physionet/output  -v /home/yangshan/cinc2020_pytorch/test_data:/physionet/test_data -v /home/yangshan/cinc2020_pytorch/model:/physionet/model  image:v1.0 bash
+
 3、python train_model.py data/ model/
+
 4、python driver.py model/ data/ output/
+
 5、python evaluate_12ECG_score.py data/ output/
 
