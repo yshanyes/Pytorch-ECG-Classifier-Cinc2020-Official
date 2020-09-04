@@ -1,0 +1,11 @@
+numpy==1.16.0
+scipy==1.4.1
+pandas==0.24.1
+Cython==0.29.13
+scikit-learn==0.22
+tensorboard_logger==0.1.0
+joblib==0.13.2
+tqdm==4.40.2
+wfdb==2.2.1
+future==0.18.2
+iterative-stratification==0.1.6
